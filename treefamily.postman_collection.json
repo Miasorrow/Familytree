@@ -1,0 +1,916 @@
+{
+	"info": {
+		"_postman_id": "351aa3a0-f6df-4a9d-918d-b3bf1d051cf2",
+		"name": "treefamily",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25218559"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/afficher_individus/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/afficher_individus/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_individu/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"noms\": [\"Lowblow\"],\n  \"prenoms\": [\"Bob\"],\n  \"date_naissance\": \"1901-01-01\",\n  \"date_deces\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_individu/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/update_individu/2",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"date_deces\" : \"1999-01-01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/update_individu/2"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_individu/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"noms\": [\"Lowblow\",\"Lahblah\"],\n  \"prenoms\": [\"Marie\"],\n  \"date_naissance\": \"1903-10-01\", \n  \"date_deces\": \"2012-12-12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_individu/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_individu/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"noms\": [\"de Taxi du Poet\"],\n  \"prenoms\": [\"Jean-Chrysostome\"],\n  \"date_naissance\": \"1911-11-11\",\n  \"date_deces\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_individu/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_individu/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"noms\": [\"Lowblow\"],\n  \"prenoms\": [\"Eude-Edmon\"],\n  \"date_naissance\": \"1930-12-24\",\n  \"date_deces\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_individu/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id_parent\": 3,  // ID de Bob\n  \"id_enfant\": 5,  // ID de Eude-Edmon\n  \"id_relation\": 1 // 1 = biologique (selon ton TypeRelation)\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/update_individu/2",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"prenoms\": [\"Chantal\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/update_individu/2"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n  {\n    \"id_parent\": 3,   // Bob\n    \"id_enfant\": 6,   // Eugénie\n    \"id_relation\": 1  // biologique\n  }\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"id_parent\": 2,   // Marie-Chantal\n    \"id_enfant\": 6,\n    \"id_relation\": 1\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_individu/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"noms\": [\"Lowblow\"],\n  \"prenoms\": [\"Eugénie\"],\n  \"date_naissance\": \"1940-06-30\",\n  \"date_deces\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_individu/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_individu/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"noms\": [\"X\"],                 // ou le nom que tu veux\n  \"prenoms\": [\"Thierry-Kevin\"],\n  \"date_naissance\": \"1966-03-03\",\n  \"date_deces\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_individu/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_individu/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"noms\": [\"Lowblow\"],\n  \"prenoms\": [\"Eude-Edmon\"],\n  \"date_naissance\": \"1930-12-24\",\n  \"date_deces\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_individu/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"id_parent\": 4,      // Jean-Chrysostome\n        \"id_enfant\": 6,      // Eugénie\n        \"id_relation\": 2     // adoptif\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"id_parent\": 6,      // Eugénie\n        \"id_enfant\": 7,      // Thierry-Kevin\n        \"id_relation\": 1     // biologique\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"id_parent\": 4,      // Jean-Chrysostome\n        \"id_enfant\": 7,      // Thierry-Kevin\n        \"id_relation\": 1     // biologique ou adoptif selon ton choix\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_individu/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"date_naissance\": \"1976-06-06\",\n  \"date_deces\": \"1987-07-07\",\n  \"noms\": [\"Lowblow\"],\n  \"prenoms\": [\"Fanny\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_individu/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"id_parent\": 5,      \n        \"id_enfant\": 9,      \n        \"id_relation\": 1     \n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_individu/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"noms\": [\"Lahblah\"],\n  \"prenoms\": [\"River\", \"Willow\", \"Moonbeam\"],\n  \"date_naissance\": \"1968-10-10\",\n  \"date_deces\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_individu/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_individu/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"noms\": [\"Lahblah\"],\n  \"prenoms\": [\"Zephyr\", \"Rainbow\", \"Sunshine\"],\n  \"date_naissance\": \"1969-10-10\",\n  \"date_deces\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_individu/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_individu/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"noms\": [\"Lahblah\"],\n  \"prenoms\": [\"Juniper\", \"Sage\", \"Harmony\"],\n  \"date_naissance\": \"1973-10-10\",\n  \"date_deces\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_individu/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id_parent\": 6,\n  \"id_enfant\": 10,\n  \"id_relation\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id_parent\": 2,\n  \"id_enfant\": 10,\n  \"id_relation\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id_parent\": 6,\n  \"id_enfant\": 13,\n  \"id_relation\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id_parent\": 2,\n  \"id_enfant\": 13,\n  \"id_relation\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/delete_individu/3",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/delete_individu/3"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/update_individu/13",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"date_deces\": \"2004-02-13\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/update_individu/13"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/ajouter_individu",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"date_naissance\": null,\n  \"date_deces\": null,\n  \"noms\": [\"Lahblah\"],\n  \"prenoms\": [\"Blaža\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/ajouter_individu"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/ajouter_individu",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"noms\": [\"Lahblah\"],\n  \"prenoms\": [\"Luna\", \"Starflower\", \"Seraphina\"],\n  \"date_naissance\": \"1970-10-10\",\n  \"date_deces\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/ajouter_individu"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/ajouter_relation/parent_enfant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id_parent\": 15,\n  \"id_enfant\": 14,\n  \"id_relation\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/ajouter_relation/parent_enfant"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/ajouter_relation/parent_enfant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id_parent\": 10,\n  \"id_enfant\": 14,\n  \"id_relation\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/ajouter_relation/parent_enfant"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/ajouter_relation/parent_enfant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id_parent\": 12,\n  \"id_enfant\": 14,\n  \"id_relation\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/ajouter_relation/parent_enfant"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/delete_nom_individu/?id_individu=7&nom=X",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/delete_nom_individu/?id_individu=7&nom=X",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"delete_nom_individu",
+						""
+					],
+					"query": [
+						{
+							"key": "id_individu",
+							"value": "7"
+						},
+						{
+							"key": "nom",
+							"value": "X"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/update_individu/7",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"noms\": [\"Lowblow-Lahblah de Taxi du Poet\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/update_individu/7"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id_parent\": 5,\n  \"id_enfant\": 7,\n  \"id_relation\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_individu/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date_naissance\": \"1901-01-01\",\n    \"date_deces\": null,\n    \"noms\": [\"Lowblow\"],\n    \"prenoms\": [\"Bob\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_individu/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"id_parent\": 16, \n        \"id_enfant\": 7,\n        \"id_relation\": 1\n    } ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/update_individu/7",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"noms\": \"X\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/update_individu/7"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/update_individu/7",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"date_naissance\": \"1920-06-06\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/update_individu/9"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_individu/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"noms\": [\"Skydancer\"],\n  \"prenoms\": [\"Orion\"],\n  \"date_naissance\": null,\n  \"date_deces\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_individu/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id_parent\": 16,\n  \"id_enfant\": 4,\n  \"id_relation\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/ajouter_relation/parent_enfant/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/delete_prenom_individu/?id_individu=15&prenom=Starflower",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/delete_prenom_individu/?id_individu=15&prenom=Starflower",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"delete_prenom_individu",
+						""
+					],
+					"query": [
+						{
+							"key": "id_individu",
+							"value": "15"
+						},
+						{
+							"key": "prenom",
+							"value": "Starflower"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/update_individu/15",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n  \"prenoms\": [\"Belinda\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/update_individu/15"
+			},
+			"response": []
+		}
+	]
+}
